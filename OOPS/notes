@@ -1,0 +1,5 @@
+--->Public class can be only one in a file but nested public class are allowed
+--->Public class Name should be equal to name of the file 
+--->class can not be protected or private but its data and methods may be private
+and protected
+--->class can be static.

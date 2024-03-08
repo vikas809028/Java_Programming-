@@ -1,0 +1,10 @@
+If Node is static its seperate object can be created and it can be directly accessed but 
+not using object of linkedList
+
+If Node class is non static it can be used only using instace of Linkedlist class
+
+If head is static it can be used directly as well as using instance of linkedList but
+if it non static it can be used only using an instance of linkedList
+
+In other file direct members can not be acccessed directly they can be accessed only
+using instance of Parent class
