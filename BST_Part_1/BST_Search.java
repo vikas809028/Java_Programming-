@@ -1,6 +1,7 @@
 package BST_Part_1;
 
-public class InOrderTraversal {
+public class BST_Search {
+
     public static class Node{
         int data;
         Node left;
@@ -15,15 +16,6 @@ public class InOrderTraversal {
         }
     }
 
-    public static void inOrder(Node root){
-        if(root==null){
-            return ;
-        }
-        inOrder(root.left);
-        System.out.print(root.data+" ");
-        inOrder(root.right);
-
-    }
     public static Node insert(Node root,int data){
         if(root==null){
             root = new Node(data);
@@ -37,13 +29,27 @@ public class InOrderTraversal {
         }
         return root;
     }
+    public static Boolean search(Node root,int data){
+        if(root==null){
+            return false;
+        }
+        if(root.data == data){
+            return true;
+        }
+        if(data<root.data){
+            return search(root.left,data);
+        }
+        else {
+            return search(root.right, data);
+        }
+    }
     public static void main(String[] args) {
         Node root = null;
-        int values[] = {3,4,5,6,2};
+        int values[] = {3,4,5,6,1};
         for(int i =0; i<values.length;i++){
            root =  insert(root, values[i]);
         }
-        System.out.println("The root of the tree is: "+root.data);
-        inOrder(root);
-    }   
+        System.out.println(search(root, 8));
+    }
+       
 }
