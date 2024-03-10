@@ -1,1 +1,1 @@
-<h1>A complete Java Tutorial to learn Java</h1>
+<h1>A complete Tutorial to learn Java</h1>
