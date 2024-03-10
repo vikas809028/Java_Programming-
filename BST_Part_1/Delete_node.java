@@ -75,7 +75,7 @@ public class Delete_node {
             // case--3
             Node IS = inOrderSuccessor(root.right);
             root.data = IS.data;
-            delete(root.right, data);
+            root.right = delete(root.right, data);
 
         }
         return root;
