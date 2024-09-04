@@ -1,15 +1,11 @@
-public class NQueens {
-    public static boolean nQueens(String chess[][], int row) {
-        // base case
+public class quuen {
+    static int count = 0;
+
+    public static boolean nQueens(String[][] chess, int row) {
         if (row == chess.length) {
-            // for printing number of counts
             printChess(chess);
-
-            count++; // to get corret way comment return true
-
-            // return true;
+            count++;
         }
-        // recursive approach
         for (int j = 0; j < chess.length; j++) {
             if (isSafe(chess, row, j)) {
                 chess[row][j] = "Q";
@@ -22,37 +18,27 @@ public class NQueens {
 
                 chess[row][j] = "X";
             }
-
         }
         return false;
     }
 
-    public static boolean isSafe(String chess[][], int row, int col) {
-        // upword vertical
+    public static boolean isSafe(String[][] board, int row, int col) {
         for (int i = row - 1; i >= 0; i--) {
-            if (chess[i][col] == "Q") {
+            if (board[i][col] == "Q") {
                 return false;
-
             }
         }
-        // left diagonal
-        for (int i = row - 1, j = col - 1; j >= 0 && i >= 0; i--, j--) {
-            if (chess[i][j] == "Q") {
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+            if (board[i][j] == "Q") {
                 return false;
-
             }
         }
-
-        // right diagonal
-        for (int i = row - 1, j = col + 1; i >= 0 && j < chess.length; i--, j++) {
-            if (chess[i][j] == "Q") {
+        for (int i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++) {
+            if (board[i][j] == "Q") {
                 return false;
-
             }
         }
-
         return true;
-
     }
 
     public static void printChess(String chess[][]) {
@@ -65,9 +51,7 @@ public class NQueens {
         }
     }
 
-    static int count = 0;
-
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = 4;
         String chess[][] = new String[n][n];
 
@@ -80,5 +64,4 @@ public class NQueens {
         nQueens(chess, 0);
         System.out.println("The total number of ways to print " + n + " queens is " + count);
     }
-
 }

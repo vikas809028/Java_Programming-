@@ -1,27 +1,31 @@
 package Array;
 
 public class RemoveDuplicates {
-    public static int remDup(int[] nums){
-        int n = nums.length;
-        int[] expNums = new int[n];
+    // two pointer approach
+    public static int remDup(int arr[]) {
+        if (arr.length == 0)
+            return 0;
+        int n = arr.length;
         int j = 0;
-        expNums[j++] = nums[0];
-        
-        for(int i=1; i<n;i++){
-            if(nums[i-1]!=nums[i]){
-                expNums[j++] = nums[i];
+        // chalte jao chalte jao aur agar not equal mile j++ krke value assign kr do
+        for (int i = 1; i < n; i++) {
+            // most optimized solution
+            if (arr[i] != arr[j]) {
+                j++;
+                arr[j] = arr[i];
             }
         }
-        System.out.println("The arr is : ");
-        for(int i =0;i<expNums.length-1;i++){
-            System.out.print(expNums[i]+" ");
+
+        for (int k = 0; k <= j; k++) {
+            System.out.print(arr[k] + " ");
         }
-        System.out.println();
-        return j;
+        return j + 1;
     }
+
     public static void main(String[] args) {
-        int[]  arr ={1,1,2};
+        int[] arr = { 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 6, 7, 8, 9, };
         int k = remDup(arr);
-        System.out.println(k);
+        System.out.println();
+        System.out.println("After removing duplicates, the length of the array is: " + k);
     }
 }
