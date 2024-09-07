@@ -1,7 +1,7 @@
 package DynamicProgramming;
 
 public class LCS {
-    public static String LCS(String str1, String str2) {
+    public static String LCSS(String str1, String str2) {
         int m = str1.length();
         int n = str2.length();
         int[][] dp = new int[m + 1][n + 1];
@@ -39,7 +39,7 @@ public class LCS {
     public static void main(String[] args) {
         String str1 = "abcde";
         String str2 = "acef";
-        String lcs = LCS(str1, str2);
+        String lcs = LCSS(str1, str2);
         System.out.println("Length of Longest Common Subsequence: " + lcs.length());
         System.out.println("Longest Common Subsequence: " + lcs);
     }

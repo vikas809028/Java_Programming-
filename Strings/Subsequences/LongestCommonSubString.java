@@ -1,3 +1,5 @@
+package Subsequences;
+
 class LCS {
     // Function to find the length of the Longest Common Subsequence (LCS)
     static int lcs(String s1, String s2) {

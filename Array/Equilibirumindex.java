@@ -1,7 +1,7 @@
 package Array;
 
 public class Equilibirumindex {
-    public static int Equilibirumindex(int[] arr) {
+    public static int Equilibirumindexx(int[] arr) {
 
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -21,7 +21,7 @@ public class Equilibirumindex {
 
     public static void main(String[] args) {
         int a[] = { 1, 3, 4, 1, 8, 6, 3 };
-        int idx = Equilibirumindex(a);
+        int idx = Equilibirumindexx(a);
         System.out.println(idx);
     }
 }

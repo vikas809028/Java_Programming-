@@ -1,5 +1,4 @@
-
-import java.util.*;
+package Subsequences;
 
 class TUF {
     // Function to find the length of the Longest Common Subsequence (LCS)
