@@ -1,4 +1,4 @@
-package Subsequences;
+package Substring;
 
 class LCS {
     // Function to find the length of the Longest Common Subsequence (LCS)
